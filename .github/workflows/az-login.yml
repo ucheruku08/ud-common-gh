@@ -1,11 +1,12 @@
 name: Run Azure Login on push
-run-name: ${{ inputs.tgt_env }}_${{ inputs.logLevel }} 
+run-name: defname_${{ inputs.tgt_env }} 
 
 on: 
   workflow_dispatch:
     inputs:
         tgt_env:
             description: Enviornment
+            required: true
             type: environment
         action:
             description: Action
@@ -14,12 +15,6 @@ on:
                 - create and Copy 1
                 - create and copy 2
             type: choice
-        logLevel:
-            description: 'Log level'
-
-permissions:
-    id-token: write
-    contents: read
 
 jobs:
     build-and-deploy:
