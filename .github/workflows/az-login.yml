@@ -6,7 +6,6 @@ on:
     inputs:
         tgt_env:
             description: Enviornment
-            required: true
             type: environment
         action:
             description: Action
