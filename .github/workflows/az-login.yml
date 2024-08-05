@@ -15,6 +15,10 @@ on:
                 - create and copy 2
             type: choice
 
+permissions:
+    id-token: write
+    contents: read
+
 jobs:
     build-and-deploy:
         runs-on: ubuntu-latest
